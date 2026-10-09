@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贪吃蛇 · 首页</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">🐍 贪吃蛇</a>
+    <nav class="site-nav">
+      <a href="index.html">首页</a>
+      <a href="game.html">开始游戏</a>
+      <a href="list.html">排行榜</a>
+    </nav>
+    <div class="nav-right">
+      <button id="themeBtn" class="theme-btn" title="切换主题">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1>HTML5 贪吃蛇</h1>
+    <p>方向键控制小蛇吃食物，撞墙或咬到自己就结束。成绩自动存本地排行榜。</p>
+    <div class="stats">
+      <div><strong id="bestScore">0</strong><span>最高分</span></div>
+      <div><strong id="playCount">0</strong><span>游玩次数</span></div>
+      <div><strong id="rankCount">0</strong><span>榜上记录</span></div>
+    </div>
+    <a href="game.html" class="btn">立即开玩</a>
+  </section>
+
+  <section class="submit-section">
+    <h2>提交成绩</h2>
+    <form id="submitForm" novalidate>
+      <label>昵称
+        <input type="text" id="nickname" required minlength="2" maxlength="12" placeholder="2-12个字符">
+      </label>
+      <label>邮箱
+        <input type="email" id="email" required placeholder="you@example.com">
+      </label>
+      <label>分数（自动读取上一局）
+        <input type="number" id="score" readonly placeholder="请先玩一局游戏">
+      </label>
+      <label>难度
+        <select id="difficulty">
+          <option value="简单">简单</option>
+          <option value="普通" selected>普通</option>
+          <option value="困难">困难</option>
+        </select>
+      </label>
+      <button type="submit" class="btn">提交</button>
+      <p id="formMsg" class="form-msg"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 贪吃蛇 · HTML5 实训作品</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

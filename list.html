@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贪吃蛇 · 排行榜</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">🐍 贪吃蛇</a>
+    <nav class="site-nav">
+      <a href="index.html">首页</a>
+      <a href="game.html">开始游戏</a>
+      <a href="list.html">排行榜</a>
+    </nav>
+    <div class="nav-right">
+      <button id="themeBtn" class="theme-btn" title="切换主题">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>排行榜</h1>
+
+  <div class="toolbar">
+    <input type="search" id="searchInput" placeholder="搜索昵称…">
+    <button id="searchBtn" class="btn">搜索</button>
+    <select id="sortSelect">
+      <option value="time_asc" selected>按时间排序</option>
+      <option value="score">按分数排序</option>
+    </select>
+    <button id="clearBtn" class="btn btn-danger">清空全部</button>
+  </div>
+
+  <ul id="scoreList" class="score-list"></ul>
+  <p id="emptyMsg" class="empty" hidden>还没有记录，快去玩一局吧！</p>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 贪吃蛇 · HTML5 实训作品</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>
